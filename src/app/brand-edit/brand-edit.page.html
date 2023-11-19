@@ -1,0 +1,33 @@
+<!-- brands-edit.page.html -->
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Edit Brand</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-label>Brand</ion-label>
+    <ion-input [(ngModel)]="data.title" placeholder="Enter Brand"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Name</ion-label>
+    <ion-input [(ngModel)]="data.name" placeholder="Enter Brand"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Price</ion-label>
+    <ion-input [(ngModel)]="data.price" placeholder="Enter Price"></ion-input>
+  </ion-item>
+
+  
+  <ion-button (click)="update()" color="success" size="small">
+    Update
+  </ion-button>
+  <ion-button [routerLink]="[ '/brand-list']" color="danger" size="small">
+    Cancel
+  </ion-button>
+</ion-content>

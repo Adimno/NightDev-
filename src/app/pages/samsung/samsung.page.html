@@ -1,0 +1,278 @@
+<ion-header color="primary">
+  <ion-toolbar>
+    <ion-title>
+    NightDev Shop
+
+    </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-button class="logout" slot="end" (click)="signOut()">
+      <ion-icon style="background-color: black;"name="log-out"></ion-icon>
+    </ion-button>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ 
+  <div class="menu-header-bg"> 
+    
+  <ion-card routerLink="/samsung">
+    <ion-card-header>
+      <img src="assets/samsung.png" />  
+    </ion-card-header>
+ 
+  </ion-card>
+  <h1>SAMSUNG </h1>
+  
+  </div>
+   <!-- cart icon -->
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openCart()" #cart>
+      <div class="cart-length">{{ cartItemCount | async }}</div>
+      <ion-icon name="cart" class="cart-icon"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+   <!-- first cart-->
+   
+ 
+  <ion-card>
+    <img src="./assets/samsung1.png"/>
+    <ion-card-header>
+      <ion-card-subtitle>Specification</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      • SCREEN SIZE: 6.7" Main Screen | 1.9" Cover Screen <br>
+      • CAMERA: 12MP (Ultra Wide), 12MP (Wide, Dual Pixel) <br>
+      • BATTERY: 3,700 mAh<br>
+      • MEMORY: 128GB <br>
+      • DISPLAY: Dynamic AMOLED 2X (Main Display) Super AMOLED (Sub Display)<br>
+      • FRONT CAMERA: 10MP<br>
+      • RAM: 8GB<br>
+      • OS: Android 12<br>
+      • SIM: Dual (Physical + eSIM)<br>
+      • EXT MEMORY: -<br>
+      • CHIPSET: 4nm AP Qualcomm | Snapdragon 8 Gen 1<br>
+      
+    </ion-card-content>
+    <ion-list>
+      <ion-card *ngFor="let p of products5">
+        <ion-card-header>
+          <ion-card-title>{{ p.name5 }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row class="ion-align-items-center">
+            <ion-col size="8">
+              <ion-label color="secondary">
+                <b>{{ p.price5 | currency:'PHP' }}</b>
+              </ion-label>
+            </ion-col>
+            <ion-col size="4" class="ion-text-right">
+              <ion-button fill="clear" (click)="addToCart5(p)">
+                <ion-icon name="add"> </ion-icon> ADD 
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ion-card>
+
+
+
+   <!-- second cart-->
+  <ion-card>
+    <img src="./assets/samsung2.png" />
+    <ion-card-header>
+      <ion-card-subtitle>Specification</ion-card-subtitle>
+     
+    </ion-card-header>
+    <ion-card-content>
+      • SCREEN SIZE: 6.5 | 164.0mm/li <br>
+      • CAMERA: Sensor 1: 64.0 MP | f1.8 Sensor 2: 12.0 MP | f2.2 Sensor 3: 5.0 MP | f2.4 Sensor 4: 5.0 MP | f2.4<br>
+      • BATTERY: 5000 | mAh<br>
+      • MEMORY: 128GB<br>
+      • DISPLAY: Super AMOLED<br>
+      • FRONT CAMERA: Sensor 1: 32.0MP | f2.2<br>
+      • RAM: 6GB<br>
+      • OS: Android 12 | S<br>
+      • SIM: Nano-SIM (4FF), SIM 1 + Hybrid (SIM 2 or MicroSD)<br>
+      • EXT MEMORY: -<br>
+      • CHIPSET: Octa-Core |2.4GHz,2.0GHz| SEC | S5E8825(Exynos 1280)<br>
+       
+    </ion-card-content>
+<ion-list>
+  <ion-card *ngFor="let f of products6">
+    <ion-card-header>
+      <ion-card-title>{{ f.name6 }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="8">
+          <ion-label color="secondary">
+            <b>{{ f.price6 | currency:'PHP' }}</b>
+          </ion-label>
+        </ion-col>
+        <ion-col size="3" class="ion-text-right">
+          <ion-button fill="clear" (click)="addToCart6(f)">
+            <ion-icon name="add"></ion-icon> ADD 
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-list>
+  </ion-card>
+
+
+     <!-- third cart-->
+     <ion-card>
+      <img src="./assets/samsung3.png" />
+      <ion-card-header>
+        <ion-card-subtitle>Specification</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        • SCREEN SIZE |10.5 | 266.9mm <br>
+        • CAMERA | 8.0 MP | f2.0<br>
+        • BATTERY | 7040 | mAh<br>
+        • MEMORY | 64GB<br>
+        • DISPLAY | PLS TFT LCD <br>
+        • FRONT CAMERA | 5.0 MP | f2.2<br>
+        • RAM | 4GB<br>
+        • OS | Android 11 | R<br>
+        • SIM | Nano-SIM (4FF) | SIM 1 + MicroSD<br>
+        • EXT MEMORY | -<br>
+        • CHIPSET | Octa-Core | 2.0 GHz| UNISOC | T618<br> 
+         
+      </ion-card-content>
+  <ion-list>
+    <ion-card *ngFor="let g of products7">
+      <ion-card-header>
+        <ion-card-title>{{ g.name7 }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="8">
+            <ion-label color="secondary">
+              <b>{{ g.price7 | currency:'PHP' }}</b>
+            </ion-label>
+          </ion-col>
+          <ion-col size="3" class="ion-text-right">
+            <ion-button fill="clear" (click)="addToCart7(g)">
+              <ion-icon name="add"></ion-icon> ADD 
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+    </ion-card>
+  
+
+<!-- fourth cart-->
+
+<ion-card>
+  <img src="./assets/samsung4.png" />
+  <ion-card-header>
+    <ion-card-subtitle>Specification</ion-card-subtitle>
+  
+  </ion-card-header>
+  <ion-card-content>
+    • Resolution <br>
+         • 5,120 x 1,440 <br>
+         • Aspect Ratio<br>
+         • 32:9<br>
+         • Screen Curvature<br>
+         • 1000R<br>
+         • Brightness (Typical)<br>
+         • 420cd/m2 <br>
+         • Contrast Ratio Static<br>
+         • 2500:1(Typ)<br>
+         • Response Time<br>
+         • 1(GTG)<br>
+  </ion-card-content>
+<ion-list>
+<ion-card *ngFor="let i of products8">
+  <ion-card-header>
+    <ion-card-title>{{ i.name8 }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="8">
+        <ion-label color="secondary">
+          <b>{{ i.price8 | currency:'PHP' }}</b>
+        </ion-label>
+      </ion-col>
+      <ion-col size="3" class="ion-text-right">
+        <ion-button fill="clear" (click)="addToCart8(i)">
+          <ion-icon name="add"></ion-icon> ADD 
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>
+</ion-list>
+</ion-card>
+
+
+
+<!-- fifth cart-->
+
+<ion-card>
+  <img src="./assets/samsung5.png" />
+  <ion-card-header>
+    <ion-card-subtitle>Specification</ion-card-subtitle>
+   
+  </ion-card-header>
+  <ion-card-content>
+    •	SM-R180 Wireless headphones <br>
+    •	Bluetooth <br>
+    •	In-Ear<br>
+    •	2.4GHz-2.48GHz<br>
+    •	400mAh battery<br>
+    •	Earphone capacity: 50mah<br>
+    •	Charging time for Charging case:1-2 hours<br>
+    •	Music time : about 4 hours<br>
+    •	Call time: about 5 hours<br>
+    •	Connection range:10 - 12 meters<br>
+    •	Speaker Spec: an 11-mm woofer and 6.5-mm tweeter built into every earbud.<br>
+  </ion-card-content>
+<ion-list>
+<ion-card *ngFor="let h of products9">
+  <ion-card-header>
+    <ion-card-title>{{ h.name9 }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="8">
+        <ion-label color="secondary">
+          <b>{{ h.price9 | currency:'PHP' }}</b>
+        </ion-label>
+      </ion-col>
+      <ion-col size="3" class="ion-text-right">
+        <ion-button fill="clear" (click)="addToCart9(h)">
+          <ion-icon name="add"></ion-icon> ADD 
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>
+</ion-list>
+</ion-card>
+
+
+
+
+
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Copyright @NightDev</ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,39 @@
+ion-toolbar {
+
+  --background: #6BD7E1;
+ion-title {
+  color: white;
+  font-size: 20px;
+
+}
+.logout{
+
+  --background: #6BD7E1;
+}
+
+}
+
+.brands {
+
+    ion-card {
+       width: 200px;
+       margin-left: auto;
+       margin-right: auto;
+       margin-bottom: 30px;
+       margin-top: 40px;
+
+    }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        h1 {
+
+            text-align: center;
+            
+        }
+}
+  

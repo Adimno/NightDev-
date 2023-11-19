@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>NightDev Shop</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-button class="logout" slot="end" (click)="signOut()">
+      <ion-icon style="background-color: black;"name="log-out"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+   
+  <img src="assets/brands.png">
+  <ion-item>
+    <ion-label style="font-size: 1.3rem; font-weight: bold;">
+   BRANDS 
+    </ion-label>
+  </ion-item>
+
+  <div class="brands">
+   
+  <ion-card routerLink="/apple">
+    <ion-card-header>
+      <img src="assets/apple.png" />
+      <h1>  <ion-card-title>APPLE</ion-card-title> </h1> 
+    </ion-card-header>
+  </ion-card>
+
+
+  <ion-card  routerLink="/samsung">
+    <ion-card-header>
+      <img src="assets/samsung.png" />
+      <h1> <ion-card-title>SAMSUNG</ion-card-title></h1>
+    </ion-card-header>
+    
+  </ion-card>
+
+</div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Copyright @NightDev</ion-title>
+  </ion-toolbar>
+</ion-footer>

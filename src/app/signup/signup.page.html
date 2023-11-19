@@ -1,0 +1,32 @@
+<ion-content>
+  <div class="login-section ion-padding">
+    <div class="heading ion-padding">
+      <h1>Please Sign up!</h1>
+      <p>Sign in to continue</p>
+    </div>
+    <div class="login-form ion-padding">
+   
+      <div class="form-input">
+        <ion-icon name="mail" style="color:black;"></ion-icon>
+        <ion-item color="none">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text" #email required></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="form-input">
+        <ion-icon name="lock-closed" style="color:black;"></ion-icon>
+        <ion-item color="none">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" #password required></ion-input>
+        </ion-item>
+     
+      </div>
+    </div>
+    <div class="action-buttons ion-padding">
+      <ion-button type="submit" (click)="signUp(email, password)" expand="block">Register</ion-button>
+     <ion-button type="submit" routerLink="/login" expand="block">Login</ion-button>
+    </div>
+    </div>
+  </ion-content>
+  

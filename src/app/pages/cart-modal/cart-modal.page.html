@@ -1,0 +1,478 @@
+<ion-content fullscreen>
+
+  <!-- closing button cart -->
+<div class="ion-text-end">
+ <ion-button (click)="close()" fill="clear" color="dark">
+   <ion-icon name="close" slot="start"></ion-icon>
+ </ion-button>
+</div>
+
+<div class="ion-padding">
+
+<!-- 1st cart add,decrease,delete -->
+<ion-list>
+  <ion-item *ngFor="let p of cart" class="ion-text-wrap">
+    <ion-grid>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="2" class="ion-align-self-center">
+          <ion-button color="medium" fill="clear" (click)="decreaseCartItem(p)">
+            <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="1" class="ion-align-self-center">
+          {{ p.amount }}
+        </ion-col>
+
+        <ion-col size="2" class="ion-align-self-center">
+          <ion-button color="medium" fill="clear" (click)="increaseCartItem(p)">
+            <ion-icon name="add-circle" slot="icon-only"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="2" offset="5">
+          <ion-button color="medium" fill="clear" (click)="removeCartItem(p)">
+           <ion-icon class="trash"name="trash-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col size="4">
+          <b>{{ p.name }}</b>
+        </ion-col>
+        <ion-col size="8" class="ion-text-end">
+          {{ p.amount * p.price | currency:'PHP' }}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+ 
+</ion-list>
+
+
+
+
+
+  <!-- 2nd cart add,decrease,delete -->
+
+<ion-list>
+  <ion-item *ngFor="let f of cart1" class="ion-text-wrap">
+    <ion-grid>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="2" class="ion-align-self-center">
+          <ion-button color="medium" fill="clear" (click)="decreaseCartItem1(f)">
+            <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="1" class="ion-align-self-center">
+          {{ f.amount1 }}
+        </ion-col>
+
+        <ion-col size="2" class="ion-align-self-center">
+          <ion-button color="medium" fill="clear" (click)="increaseCartItem1(f)">
+            <ion-icon name="add-circle" slot="icon-only"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="2" offset="5">
+          <ion-button color="medium" fill="clear" (click)="removeCartItem1(f)">
+              <ion-icon class="trash"name="trash-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col size="4">
+          <b>{{ f.name1 }}</b>
+        </ion-col>
+        <ion-col size="8" class="ion-text-end">
+          {{ f.amount1 * f.price1 | currency:'PHP' }}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  
+
+</ion-list>
+
+
+  <!-- 3rd cart add,decrease,delete -->
+
+  <ion-list>
+    <ion-item *ngFor="let g of cart2" class="ion-text-wrap">
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="2" class="ion-align-self-center">
+            <ion-button color="medium" fill="clear" (click)="decreaseCartItem2(g)">
+              <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+
+          <ion-col size="1" class="ion-align-self-center">
+            {{ g.amount2 }}
+          </ion-col>
+
+          <ion-col size="2" class="ion-align-self-center">
+            <ion-button color="medium" fill="clear" (click)="increaseCartItem2(g)">
+              <ion-icon name="add-circle" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+
+          <ion-col size="2" offset="5">
+            <ion-button color="medium" fill="clear" (click)="removeCartItem2(g)">
+              <ion-icon class="trash"name="trash-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+
+
+        <ion-row>
+          <ion-col size="4">
+            <b>{{ g.name2 }}</b>
+          </ion-col>
+          <ion-col size="8" class="ion-text-end">
+            {{ g.amount2 * g.price2 | currency:'PHP' }}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    
+  
+  </ion-list>
+
+   <!-- 4th apple cart add,decrease,delete -->
+
+   <ion-list>
+    <ion-item *ngFor="let i of cart3" class="ion-text-wrap">
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="2" class="ion-align-self-center">
+            <ion-button color="medium" fill="clear" (click)="decreaseCartItem3(i)">
+              <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+
+          <ion-col size="1" class="ion-align-self-center">
+            {{ i.amount3 }}
+          </ion-col>
+
+          <ion-col size="2" class="ion-align-self-center">
+            <ion-button color="medium" fill="clear" (click)="increaseCartItem3(i)">
+              <ion-icon name="add-circle" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+
+          <ion-col size="2" offset="5">
+            <ion-button color="medium" fill="clear" (click)="removeCartItem3(i)">
+              <ion-icon class="trash"name="trash-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+
+
+        <ion-row>
+          <ion-col size="4">
+            <b>{{ i.name3 }}</b>
+          </ion-col>
+          <ion-col size="8" class="ion-text-end">
+            {{ i.amount3 * i.price3 | currency:'PHP' }}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    
+  
+  </ion-list>
+
+  
+   <!-- 5th apple cart add,decrease,delete -->
+
+   <ion-list>
+    <ion-item *ngFor="let h of cart4" class="ion-text-wrap">
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="2" class="ion-align-self-center">
+            <ion-button color="medium" fill="clear" (click)="decreaseCartItem4(h)">
+              <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+
+          <ion-col size="1" class="ion-align-self-center">
+            {{ h.amount4 }}
+          </ion-col>
+
+          <ion-col size="2" class="ion-align-self-center">
+            <ion-button color="medium" fill="clear" (click)="increaseCartItem4(h)">
+              <ion-icon name="add-circle" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+
+          <ion-col size="2" offset="5">
+            <ion-button color="medium" fill="clear" (click)="removeCartItem4(h)">
+              <ion-icon class="trash"name="trash-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+
+
+        <ion-row>
+          <ion-col size="4">
+            <b>{{ h.name4 }}</b>
+          </ion-col>
+          <ion-col size="8" class="ion-text-end">
+            {{ h.amount4 * h.price4 | currency:'PHP' }}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    
+  </ion-list>
+
+
+  <!-- 6th samsung cart add,decrease,delete -->
+
+  <ion-list>
+   <ion-item *ngFor="let h of cart5" class="ion-text-wrap">
+     <ion-grid>
+       <ion-row class="ion-align-items-center">
+         <ion-col size="2" class="ion-align-self-center">
+           <ion-button color="medium" fill="clear" (click)="decreaseCartItem5(h)">
+             <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
+           </ion-button>
+         </ion-col>
+
+         <ion-col size="1" class="ion-align-self-center">
+           {{ h.amount5 }}
+         </ion-col>
+
+         <ion-col size="2" class="ion-align-self-center">
+           <ion-button color="medium" fill="clear" (click)="increaseCartItem5(h)">
+             <ion-icon name="add-circle" slot="icon-only"></ion-icon>
+           </ion-button>
+         </ion-col>
+
+         <ion-col size="2" offset="5">
+           <ion-button color="medium" fill="clear" (click)="removeCartItem5(h)">
+              <ion-icon class="trash"name="trash-outline"></ion-icon>
+           </ion-button>
+         </ion-col>
+       </ion-row>
+
+
+       <ion-row>
+         <ion-col size="4">
+           <b>{{ h.name5 }}</b>
+         </ion-col>
+         <ion-col size="8" class="ion-text-end">
+           {{ h.amount5 * h.price5 | currency:'PHP' }}
+         </ion-col>
+       </ion-row>
+     </ion-grid>
+   </ion-item>
+   
+ </ion-list>
+
+
+ <!-- 7th samsung cart add,decrease,delete -->
+
+ <ion-list>
+   <ion-item *ngFor="let h of cart6" class="ion-text-wrap">
+     <ion-grid>
+       <ion-row class="ion-align-items-center">
+         <ion-col size="2" class="ion-align-self-center">
+           <ion-button color="medium" fill="clear" (click)="decreaseCartItem6(h)">
+             <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
+           </ion-button>
+         </ion-col>
+
+         <ion-col size="1" class="ion-align-self-center">
+           {{ h.amount6 }}
+         </ion-col>
+
+         <ion-col size="2" class="ion-align-self-center">
+           <ion-button color="medium" fill="clear" (click)="increaseCartItem6(h)">
+             <ion-icon name="add-circle" slot="icon-only"></ion-icon>
+           </ion-button>
+         </ion-col>
+
+         <ion-col size="2" offset="5">
+           <ion-button color="medium" fill="clear" (click)="removeCartItem6(h)">
+              <ion-icon class="trash"name="trash-outline"></ion-icon>
+           </ion-button>
+         </ion-col>
+       </ion-row>
+
+
+       <ion-row>
+         <ion-col size="4">
+           <b>{{ h.name6 }}</b>
+         </ion-col>
+         <ion-col size="8" class="ion-text-end">
+           {{ h.amount6 * h.price6 | currency:'PHP' }}
+         </ion-col>
+       </ion-row>
+     </ion-grid>
+   </ion-item>
+   
+ </ion-list>
+
+
+ <!-- 8th samsung cart add,decrease,delete -->
+
+ <ion-list>
+   <ion-item *ngFor="let h of cart7" class="ion-text-wrap">
+     <ion-grid>
+       <ion-row class="ion-align-items-center">
+         <ion-col size="2" class="ion-align-self-center">
+           <ion-button color="medium" fill="clear" (click)="decreaseCartItem7(h)">
+             <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
+           </ion-button>
+         </ion-col>
+
+         <ion-col size="1" class="ion-align-self-center">
+           {{ h.amount7 }}
+         </ion-col>
+
+         <ion-col size="2" class="ion-align-self-center">
+           <ion-button color="medium" fill="clear" (click)="increaseCartItem7(h)">
+             <ion-icon name="add-circle" slot="icon-only"></ion-icon>
+           </ion-button>
+         </ion-col>
+
+         <ion-col size="2" offset="5">
+           <ion-button color="medium" fill="clear" (click)="removeCartItem7(h)">
+              <ion-icon class="trash"name="trash-outline"></ion-icon>
+           </ion-button>
+         </ion-col>
+       </ion-row>
+
+
+       <ion-row>
+         <ion-col size="4">
+           <b>{{ h.name7 }}</b>
+         </ion-col>
+         <ion-col size="8" class="ion-text-end">
+           {{ h.amount7 * h.price7 | currency:'PHP' }}
+         </ion-col>
+       </ion-row>
+     </ion-grid>
+   </ion-item>
+   
+ </ion-list>
+
+
+ <!-- 9th samsung cart add,decrease,delete -->
+
+ <ion-list>
+   <ion-item *ngFor="let h of cart8" class="ion-text-wrap">
+     <ion-grid>
+       <ion-row class="ion-align-items-center">
+         <ion-col size="2" class="ion-align-self-center">
+           <ion-button color="medium" fill="clear" (click)="decreaseCartItem8(h)">
+             <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
+           </ion-button>
+         </ion-col>
+
+         <ion-col size="1" class="ion-align-self-center">
+           {{ h.amount8 }}
+         </ion-col>
+
+         <ion-col size="2" class="ion-align-self-center">
+           <ion-button color="medium" fill="clear" (click)="increaseCartItem8(h)">
+             <ion-icon name="add-circle" slot="icon-only"></ion-icon>
+           </ion-button>
+         </ion-col>
+
+         <ion-col size="2" offset="5">
+           <ion-button color="medium" fill="clear" (click)="removeCartItem8(h)">
+              <ion-icon class="trash"name="trash-outline"></ion-icon>
+           </ion-button>
+         </ion-col>
+       </ion-row>
+
+
+       <ion-row>
+         <ion-col size="4">
+           <b>{{ h.name8 }}</b>
+         </ion-col>
+         <ion-col size="8" class="ion-text-end">
+           {{ h.amount8 * h.price8 | currency:'PHP' }}
+         </ion-col>
+       </ion-row>
+     </ion-grid>
+   </ion-item>
+   
+ </ion-list>
+
+
+ <!-- 10th samsung cart add,decrease,delete -->
+
+ <ion-list>
+   <ion-item *ngFor="let h of cart9" class="ion-text-wrap">
+     <ion-grid>
+       <ion-row class="ion-align-items-center">
+         <ion-col size="2" class="ion-align-self-center">
+           <ion-button color="medium" fill="clear" (click)="decreaseCartItem9(h)">
+             <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
+           </ion-button>
+         </ion-col>
+
+         <ion-col size="1" class="ion-align-self-center">
+           {{ h.amount9 }}
+         </ion-col>
+
+         <ion-col size="2" class="ion-align-self-center">
+           <ion-button color="medium" fill="clear" (click)="increaseCartItem9(h)">
+             <ion-icon name="add-circle" slot="icon-only"></ion-icon>
+           </ion-button>
+         </ion-col>
+
+         <ion-col size="2" offset="5">
+           <ion-button color="medium" fill="clear" (click)="removeCartItem9(h)">
+              <ion-icon class="trash"name="trash-outline"></ion-icon>
+           </ion-button>
+         </ion-col>
+       </ion-row>
+
+
+       <ion-row>
+         <ion-col size="4">
+           <b>{{ h.name9 }}</b>
+         </ion-col>
+         <ion-col size="8" class="ion-text-end">
+           {{ h.amount9 * h.price9 | currency:'PHP' }}
+         </ion-col>
+       </ion-row>
+     </ion-grid>
+   </ion-item>
+   
+ </ion-list>
+
+
+
+<!-- total-->
+
+ <ion-item>
+   <ion-grid>
+     <ion-row>
+       <ion-col size="7">
+         Total:
+       </ion-col>
+       <ion-col size="5" class="ion-text-end">
+         {{ getTotal() + getTotal1()  + getTotal2() + getTotal3() + getTotal4() + getTotal5() + getTotal6() + getTotal7() + getTotal8() + getTotal9()| currency:'PHP' }} 
+       </ion-col>
+     </ion-row>
+   </ion-grid>
+ </ion-item>
+
+ <ion-button expand="full" (click)="checkout()">
+   Checkout
+ </ion-button>
+
+</div>
+
+</ion-content>

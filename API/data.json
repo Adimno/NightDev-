@@ -1,0 +1,69 @@
+{
+  "brands": [
+    {
+      "title": "Apple",
+      "name": "Apple 14",
+      "price": "33,990",
+      "specs": "asdas",
+      "id": 1
+    },
+    {
+      "title": "Apple",
+      "name": "IpadAir (2022)",
+      "price": "35,490.00",
+      "specs": "sdasdasd",
+      "id": 2
+    },
+    {
+      "title": "Apple",
+      "name": "Watch Series 2022",
+      "price": "104,990.00",
+      "specs": "sdsds",
+      "id": 3
+    },
+    {
+      "title": "Apple",
+      "name": "MacBook Air",
+      "price": "87,990,00",
+      "specs": "dsa",
+      "id": 4
+    },
+    {
+      "title": "Apple",
+      "name": "AirpodsPro ",
+      "price": "14,193.00",
+      "specs": "asdasdasdasdas",
+      "id": 5
+    },
+    {
+      "title": "Samsung",
+      "id": 11,
+      "name": "Galaxy Z Flip4",
+      "price": "58,990.00"
+    },
+    {
+      "id": 12,
+      "title": "Samsung",
+      "name": "Galaxy A33",
+      "price": "19,990.00"
+    },
+    {
+      "id": 13,
+      "title": "Samung",
+      "name": "TAB A8 LTE",
+      "price": "18,990.00"
+    },
+    {
+      "id": 14,
+      "title": "Samsung",
+      "name": "G9 Monitor",
+      "price": "77,299.00"
+    },
+    {
+      "id": 15,
+      "title": "Samsung",
+      "name": "Galaxy Buds 2",
+      "price": "6,990.00"
+    }
+  ]
+}

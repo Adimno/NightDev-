@@ -1,0 +1,72 @@
+<ion-app>
+  <ion-menu menuId="main-menu" contentId="main">
+  
+
+
+
+  <ion-content>
+   <div class="menu-header-bg">  </div>
+   <div class="header-content">
+  <img src="../assets/logo.png" alt=""> 
+   <ion-label>
+    <h1 style="color: white;"> NightDev</h1>
+  
+
+  
+   </ion-label>
+  </div> 
+
+
+  <br>
+ 
+
+  
+  <ion-list class="menu-items" lines="none">
+
+  
+ <br>
+ 
+ <br>
+ <br>
+
+    <ion-item routerLink="home"> 
+      <ion-icon name="speedometer-outline"></ion-icon> Home
+    </ion-item>
+ 
+    <ion-item routerLink="brands"> 
+      <ion-icon name="pricetags"></ion-icon>Brands 
+    </ion-item>
+
+    <ion-item routerLink="brand-create"> 
+      <ion-icon name="add"></ion-icon>  Add brands
+    </ion-item>
+
+    <ion-item routerLink="allproducts"> 
+      <ion-icon name="cart"></ion-icon> All products
+    </ion-item>
+     
+
+  </ion-list>
+
+  
+  
+  <div class ="about">
+    <ion-button  (click)="developers()"> 
+     Developers
+    </ion-button>
+    </div>
+  <div class ="about">
+  <ion-button  (click)="about()"> 
+   HELP
+  </ion-button>
+  </div>
+
+  
+  
+  </ion-content>
+  
+  
+  
+  </ion-menu>
+    <ion-router-outlet id="main"></ion-router-outlet>
+  </ion-app>

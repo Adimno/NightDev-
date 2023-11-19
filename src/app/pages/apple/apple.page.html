@@ -1,0 +1,247 @@
+<ion-header color="primary">
+  <ion-toolbar>
+    <ion-title>
+    NightDev Shop
+
+    </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-button class="logout" slot="end" (click)="signOut()">
+      <ion-icon style="background-color: black;"name="log-out"></ion-icon>
+    </ion-button>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ 
+  <div class="menu-header-bg"> 
+    
+  <ion-card routerLink="/apple">
+    <ion-card-header>
+      <img src="assets/apple.png" />  
+    </ion-card-header>
+ 
+  </ion-card>
+  <h1>APPLE </h1>
+  
+  </div>
+   <!-- cart icon -->
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openCart()" #cart>
+      <div class="cart-length">{{ cartItemCount | async }}</div>
+      <ion-icon name="cart" class="cart-icon"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+   <!-- first cart-->
+   
+ 
+  <ion-card>
+    <img src="./assets/apple1.png" />
+    <ion-card-header>
+      <ion-card-subtitle>Specification</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      • 6.7-inch OLED display <br>
+      • 120Hz refresh rate<br>
+      • A16 processor<br>
+      • Triple camera setup<br>
+      • 48MP main camera.<br>
+    </ion-card-content>
+    <ion-list>
+      <ion-card *ngFor="let p of products">
+        <ion-card-header>
+          <ion-card-title>{{ p.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row class="ion-align-items-center">
+            <ion-col size="8">
+              <ion-label color="secondary">
+                <b>{{ p.price | currency:'PHP' }}</b>
+              </ion-label>
+            </ion-col>
+            <ion-col size="4" class="ion-text-right">
+              <ion-button fill="clear" (click)="addToCart(p)">
+                <ion-icon name="add"> </ion-icon> ADD 
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ion-card>
+
+
+
+   <!-- second cart-->
+  <ion-card>
+    <img src="./assets/apple2.jpg" />
+    <ion-card-header>
+      <ion-card-subtitle>Specification</ion-card-subtitle>
+     
+    </ion-card-header>
+    <ion-card-content>
+      • 10.9 inches <br>
+      • 2360x1640 pixels  <br>
+      • 12 MP (	Single Camera)  <br>
+      • 12mp Front  <br>
+      • 8GB Ram <br>
+    </ion-card-content>
+<ion-list>
+  <ion-card *ngFor="let f of products1">
+    <ion-card-header>
+      <ion-card-title>{{ f.name1 }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="8">
+          <ion-label color="secondary">
+            <b>{{ f.price1 | currency:'PHP' }}</b>
+          </ion-label>
+        </ion-col>
+        <ion-col size="3" class="ion-text-right">
+          <ion-button fill="clear" (click)="addToCart1(f)">
+            <ion-icon name="add"></ion-icon> ADD 
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-list>
+  </ion-card>
+
+
+     <!-- third cart-->
+     <ion-card>
+      <img src="./assets/apple3.jpg" />
+      <ion-card-header>
+        <ion-card-subtitle>Specification</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+         • 32GB storage capacity <br>
+         •	W3 wireless chip  <br>
+         •	ultra wideband U1 chip  <br>
+      </ion-card-content>
+  <ion-list>
+    <ion-card *ngFor="let g of products2">
+      <ion-card-header>
+        <ion-card-title>{{ g.name2 }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="8">
+            <ion-label color="secondary">
+              <b>{{ g.price2 | currency:'PHP' }}</b>
+            </ion-label>
+          </ion-col>
+          <ion-col size="3" class="ion-text-right">
+            <ion-button fill="clear" (click)="addToCart2(g)">
+              <ion-icon name="add"></ion-icon> ADD 
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+    </ion-card>
+  
+
+<!-- fourth cart-->
+
+<ion-card>
+  <img src="./assets/apple4.jpg" />
+  <ion-card-header>
+    <ion-card-subtitle>Specification</ion-card-subtitle>
+  
+  </ion-card-header>
+  <ion-card-content>
+    •	13.6-inch, 2560 x 1664 display. <br>
+    •	Apple M2 chip (8c CPU / 8c GPU, configurable to 10c GPU) <br>
+    •	8GB RAM (configurable to 24GB) <br>
+    •	256GB storage (configurable to 2TB) <br>
+    •	Two Thunderbolt 4 USB-C ports. <br>
+    •	MagSafe 3 charging. <br>
+    •	3.5mm headphone jack. <br>
+    •	Four-speaker sound system with three-mic array.<br>
+  </ion-card-content>
+<ion-list>
+<ion-card *ngFor="let i of products3">
+  <ion-card-header>
+    <ion-card-title>{{ i.name3 }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="8">
+        <ion-label color="secondary">
+          <b>{{ i.price3 | currency:'PHP' }}</b>
+        </ion-label>
+      </ion-col>
+      <ion-col size="3" class="ion-text-right">
+        <ion-button fill="clear" (click)="addToCart3(i)">
+          <ion-icon name="add"></ion-icon> ADD 
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>
+</ion-list>
+</ion-card>
+
+
+
+<!-- fifth cart-->
+
+<ion-card>
+  <img src="./assets/apple5.png" />
+  <ion-card-header>
+    <ion-card-subtitle>Specification</ion-card-subtitle>
+   
+  </ion-card-header>
+  <ion-card-content>
+    •	Bluetooth 5.3 wireless technology <br>
+    •	Active Noise Cancellation <br>
+    •	Touch control <br>
+    •	Apple H2 headphone chip <br>
+    •	Apple U1 chip in MagSafe Charging Case <br>
+    • 48KHZ audio <br>
+  </ion-card-content>
+<ion-list>
+<ion-card *ngFor="let h of products4">
+  <ion-card-header>
+    <ion-card-title>{{ h.name4 }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="8">
+        <ion-label color="secondary">
+          <b>{{ h.price4 | currency:'PHP' }}</b>
+        </ion-label>
+      </ion-col>
+      <ion-col size="3" class="ion-text-right">
+        <ion-button fill="clear" (click)="addToCart4(h)">
+          <ion-icon name="add"></ion-icon> ADD 
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>
+</ion-list>
+</ion-card>
+
+
+
+
+
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Copyright @NightDev</ion-title>
+  </ion-toolbar>
+</ion-footer>

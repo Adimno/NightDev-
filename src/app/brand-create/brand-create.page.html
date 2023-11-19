@@ -1,0 +1,58 @@
+<!-- student-create.html -->
+<ion-header>
+  <ion-toolbar >
+    <ion-title>Create Brand</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+
+
+    <ion-button class="logout" slot="end" (click)="signOut()">
+      <ion-icon style="background-color: black;"name="log-out"></ion-icon>
+    </ion-button>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+
+
+  <ion-item>
+    <ion-label>Title</ion-label>
+    <ion-input [(ngModel)]="data.title" placeholder="Enter brand"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Name</ion-label>
+    <ion-input [(ngModel)]="data.name" placeholder="Enter Name"></ion-input>
+  </ion-item>
+
+
+
+  <ion-item>
+    <ion-label>Price</ion-label>
+    <ion-input [(ngModel)]="data.price" placeholder="Enter Price"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+   
+    <ion-button (click)="submitForm()">Add </ion-button>
+  
+
+      <ion-button (click)="submitView()"> View
+    </ion-button>
+  </ion-item>
+
+
+
+</ion-content> 
+
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Copyright @NightDev</ion-title>
+  </ion-toolbar>
+</ion-footer>
